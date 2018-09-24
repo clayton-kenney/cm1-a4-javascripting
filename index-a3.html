@@ -3,8 +3,66 @@
   <head>
     <meta charset="utf-8">
     <title>cm-javascripting</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <script type="text/javascript" src="script.js"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+        margin: 0;
+      }
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        width: 25%;
+        background: #f1f1f1;
+        position: fixed;
+        height: 100%; /* makes it so the sidebar spans the entire window height */
+        overflow: auto; /* enables sidebar scrolling */
+      }
+      li a {
+        display: block;
+        color: #000;
+        text-decoration: none;
+        padding: 8px 16px;
+      }
+      /* li a:hover {
+        background-color: #555555;
+        color: #FFFFFF;
+      } */
+      li a.active {
+        background-color: #4CAF50;
+        color: white;
+      }
+      li a:hover:not(.active){
+        background-color: #555;
+        color: white;
+      }
+      
+      #content {
+        margin-left:25%;
+        padding:16px;
+        height:1000px;
+      }
+
+      .red {
+        color: red;
+      }
+      .orange {
+        color: orange;
+      }
+      .yellow {
+        color: yellow;
+      }
+      .green {
+        color: green;
+      }
+      .blue {
+        color: blue;
+      }
+      .purple {
+        color: purple;
+      }      
+            
+    </style>
   </head>
   <body>
     
