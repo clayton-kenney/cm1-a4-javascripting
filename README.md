@@ -1,5 +1,5 @@
 # cm-javascripting
-Project for [Critial Making 1}(http://make.cmci.studio/APRD-5005/) @ CMCI Studio (CU Boulder)
+Project for [Critial Making 1](http://make.cmci.studio/APRD-5005/) @ CMCI Studio (CU Boulder)
 
 ## Prompt
 ### DOM Basics:
