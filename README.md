@@ -1,5 +1,6 @@
 # cm-javascripting
 Project for [Critial Making 1](http://make.cmci.studio/APRD-5005/) @ CMCI Studio (CU Boulder)
+[Look in the start folder for my solutions.](https://github.com/clayton-kenney/cm1-a4-javascripting/tree/master/starter)
 
 ## Prompt
 ### DOM Basics:
