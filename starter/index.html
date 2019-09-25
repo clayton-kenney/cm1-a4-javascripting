@@ -116,7 +116,71 @@
         console.log("begin script");
 
         // Insert your code here
-                        
+      //Get a reference to all the paragraph (p) tags in the document.
+      let a = document.getElementsByTagName('p')
+  //Get a reference to a paragraph tag with a specific id of "second".
+  a =document.getElementById('second')
+//Get a reference to a all paragraph tags with a class of "first".
+a = document.getElementsByClassName('first')
+//Get a reference to an element or elements within another element. For example, if you have an unordered list (ul) with several list items (li), how do you select a specific li and display it's contents to the console?
+a = document.getElementsByTagName('li')[1].textContent
+//or
+let elem = document.getElementById('sidebar').getElementsByTagName('li')
+console.log(elem[2].textContent)
+//Change the active color of the sidebar to red.
+a = document.querySelector('li a.active').style.backgroundColor = "red"
+//Changing Elements
+
+//Change the text within a sidebar list item (li) to "Foo". 
+let change = document.getElementsByTagName('li')[1]
+change.innerHTML = "<a href='#'>foo</a>"
+//Change the text within the previously selected list item (li) to "Greetings List Item! I'm a string from another planet!".
+change.innerHTML = "<a href='#'>Greetings List Item! I'm a string from another planet!</a>"
+//Change the text of a specific paragraph to a different string of text. Use an Ipsum generator tool to create new placeholder text that you insert using Javascript.
+a = document.getElementById('change-me').textContent = "Lorem ipsum dolor amet adipisicing tacos ut ea in salvia jean shorts chia. Cold-pressed deserunt everyday carry retro glossier 90's polaroid etsy chillwave edison bulb kitsch vape neutra. Adaptogen authentic man braid, blog shabby chic ut intelligentsia +1 schlitz bushwick id nisi disrupt. Cardigan ea reprehenderit af church-key labore."
+
+//Removing Elements
+//Clear the contents of the paragraph with an id of "empty-me".
+document.getElementById('empty-me').textContent = ""
+//Clear the contents of the set of paragraphs with class "empty-us".
+let empty = document.getElementsByClassName('empty-us')
+for (let i =0; i < empty.length; i++) {
+    empty[i].textContent = "";
+}
+//Remove the div with a specific id of "section3".
+let sect3 = document.getElementById('section3');
+sect3.parentElement.removeChild(sect3)
+
+//Adding Elements
+
+//Create a new anchor tag that links to your blog and insert it just after the paragraph tag in the div with an id of "about".
+let loc = document.getElementById('about')
+loc.insertAdjacentHTML('beforeend', '<a href="blog.claytonk.com">My blog</a>')
+//Append a new div anywhere in the document and give it an id of your choice. Insert a paragraph with some content into the div using javascript.
+let loc2 = document.getElementById('second')
+loc2.insertAdjacentHTML('afterend', "<p id='new'>This is an awesome paragraph with some cool text</p>")
+//Add a new list item to the sidebar ul that links to your new div so you can click and scroll to it.
+let insert = document.createElement('li');
+document.getElementsByTagName('ul')[0].appendChild(insert);
+insert.innerHTML = "<a href='#new'>New Paragraph</a>"
+//Add a new list item with URL to www.google.com in the sidebar.
+let insert2 = document.createElement('li');
+document.getElementsByTagName('ul')[0].appendChild(insert2);
+insert2.innerHTML = "<a href='http://www.google.com'>Google</a>";
+//Event Listeners
+
+//Make an event listener for any h2 element that triggers an alert() when you click it. Set the alert message to "Hey Hey Hey!".
+const listen = document.getElementsByTagName('h2');
+let values = Object.values(listen)
+for (const value of values) {
+    value.addEventListener("click", () => alert("Hey Hey Hey!"))}
+//Make an event listener that triggers a change in the text of a specific paragraph with the id "change-me".
+const listen2 = document.getElementById('change-me');
+let changeTo = "Paragraph Text Changed";
+function changeP() {
+  listen2.innerText = changeTo;
+}; 
+listen2.addEventListener('click', changeP())           
         console.log("end script");
       </script>
 
